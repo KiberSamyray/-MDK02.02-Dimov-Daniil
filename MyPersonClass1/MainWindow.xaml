@@ -1,0 +1,35 @@
+﻿<Window x:Class="MyPersonClass1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyPersonClass1"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Класс Person" Height="450" Width="800" Icon="/1646170799_10-kartinkin-net-p-kartinki-ribka-11.png">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="773*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Label Content="Введите имя, фамилию и дату рождения сотрудника" HorizontalAlignment="Left" Height="27" Margin="223,100,0,0" VerticalAlignment="Top" Width="300" Grid.Column="1"/>
+
+        <Button x:Name="Buttin_Zapis"  Content="Отобразить запись" HorizontalAlignment="Left" Height="37" Margin="295,257,0,0" VerticalAlignment="Top" Width="156" Click="Buttin_Zapis_Click" Grid.Column="1"/>
+        <DatePicker x:Name ="DatePL" HorizontalAlignment="Left" Margin="223,227,0,0" VerticalAlignment="Top" Width="300" Grid.Column="1" >
+            <DatePicker.Resources>
+                <Style TargetType="DatePickerTextBox">
+                    <Setter Property="IsReadOnly" Value="True"/>
+
+                </Style>
+            </DatePicker.Resources>
+        </DatePicker>
+
+        <TextBox x:Name ="FirstName" HorizontalAlignment="Left" Margin="223,141,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300" Grid.Column="1"   materialDesign:HintAssist.Hint="Введите имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+        <TextBox x:Name ="LastName" HorizontalAlignment="Left" Margin="223,178,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="300" Grid.Column="1" materialDesign:HintAssist.Hint="Введите фамилию" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+
+
+    </Grid>
+</Window>
