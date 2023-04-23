@@ -98,14 +98,26 @@ namespace Debugging_of_individual_modules_of_a_software_project
 
         private void ImageRight_Click(object sender, RoutedEventArgs e)
         {
-            ImageBrush brush = new ImageBrush(image1);
-            RotateTransform rotateTransform = new RotateTransform();
+            if(NameFlag.Text == "Флаг России")
+            {
+                ImageBrush brush = new ImageBrush(image);
+                TranslateTransform transform = new TranslateTransform();
+                transform.X = 40;
+                transform.Y = 130;
+                brush.Transform = transform;
+                FillRect.Fill = brush;
+            }
+            else
+            {
+                ImageBrush brush = new ImageBrush(image1);
+                TranslateTransform transform = new TranslateTransform();
+                transform.X = 20;
+                transform.Y = 60;
+                brush.Transform = transform;
+                FillRect.Fill = brush;
+            }
 
-            brush.AlignmentY = AlignmentY.Bottom;
-            brush.Transform = rotateTransform;
-            
            
-            FillRect.Fill = brush;
         }
     }
 }
