@@ -119,5 +119,11 @@ namespace Debugging_of_individual_modules_of_a_software_project
 
            
         }
+
+        private void BackColor_Click(object sender, RoutedEventArgs e)
+        {
+            SolidColorBrush solidColorBrush = new SolidColorBrush(Colors.Red);
+            FillRect.Fill = solidColorBrush;
+        }
     }
 }
